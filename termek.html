@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>document.documentElement.className += ' js';</script>
+<title>Termék — Hegyháti Finomságok</title>
+<meta name="description" content="Kézműves húsáru a Hegyháti Finomságoktól — saját tenyésztésből, Pécsről.">
+<meta name="robots" content="noindex,follow">
+<link rel="icon" type="image/png" href="media/logo-emblem.png">
+<link rel="stylesheet" href="css/fonts.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+<div class="amb" aria-hidden="true"><div class="amb__vig"></div></div>
+
+<nav class="nav" aria-label="Fő navigáció">
+  <a href="index.html" class="nav__brand">
+    <strong>Hegyháti</strong>
+    <small>Finomságok</small>
+  </a>
+  <div class="nav__links">
+    <a href="index.html" class="nav__link">Főoldal</a>
+    <a href="termekek.html" class="nav__link" aria-current="page">Termékek</a>
+    <a href="rolunk.html" class="nav__link">Történetünk</a>
+    <a href="szallitas.html" class="nav__link">Szállítás</a>
+    <a href="kapcsolat.html" class="nav__link">Kapcsolat</a>
+  </div>
+  <div class="nav__cta">
+    <button class="cart-btn" id="cartBtn" aria-label="Kosár megnyitása">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h12l1.2 12.2a1 1 0 0 1-1 1.1H5.8a1 1 0 0 1-1-1.1L6 7Z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+      <span class="cart-btn__badge" id="cartBadge">0</span>
+    </button>
+    <button class="burger" aria-label="Menü" aria-expanded="false"><span></span></button>
+  </div>
+</nav>
+
+<div class="mnav">
+  <a href="index.html">Főoldal</a>
+  <a href="termekek.html">Termékek <small>22 finomság</small></a>
+  <a href="rolunk.html">Történetünk</a>
+  <a href="szallitas.html">Szállítás</a>
+  <a href="kapcsolat.html">Kapcsolat</a>
+  <div class="mnav__foot">
+    Pécsi Vásárcsarnok · szerda és péntek 8:00–11:00<br>
+    <a href="tel:+36303007422">+36 30 300 7422</a>
+  </div>
+</div>
+
+<main class="wrap" style="padding-top:8.6rem;padding-bottom:4rem">
+  <nav class="crumbs" id="crumbs" aria-label="Morzsamenü"></nav>
+  <div class="pdet" id="pdetRoot">
+    <noscript><p style="color:#9BA0A6">A termékoldalhoz JavaScript szükséges. Árlistánkért hívjon minket: +36 30 300 7422.</p></noscript>
+  </div>
+
+  <!-- Kapcsolódó termékek -->
+  <section id="relatedSec" style="padding-bottom:2rem;display:none">
+    <h2 style="font-size:var(--step-2);margin-bottom:1.8rem">Ugyanebből a kategóriából</h2>
+    <div class="pgrid" id="relatedGrid"></div>
+  </section>
+</main>
+
+<!-- Mobil sticky vásárló-sáv (K17) -->
+<div class="buybar" id="buybar" aria-hidden="true">
+  <span class="buybar__price num-tab" id="buybarPrice">~0 Ft</span>
+  <button class="btn btn--solid btn--sm" id="buybarAdd" type="button">Kosárba</button>
+</div>
+
+<footer class="footer" style="margin-top:0">
+  <div class="wrap">
+    <div class="footer__bottom" style="border-top:0">
+      <span>© 2026 Hegyháti Finomságok · Pécs</span>
+      <span><a href="termekek.html" style="color:var(--accent-soft)">← Vissza a termékekhez</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/vendor/gsap.min.js"></script>
+<script src="js/vendor/ScrollTrigger.min.js"></script>
+<script src="js/vendor/lenis.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/data/products.js"></script>
+<script src="js/main.js"></script>
+<script src="js/shop/cart.js"></script>
+<script src="js/shop/cart-drawer.js"></script>
+<script src="js/shop/product-page.js"></script>
+</body>
+</html>
