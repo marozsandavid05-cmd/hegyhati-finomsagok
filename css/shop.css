@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HEGYHÁTI FINOMSÁGOK — bolt UI (kártyák, tabok, drawer, checkout, demó fizetés)
+   HEGYHÁTI FINOMSÁGOK, bolt UI (kártyák, tabok, drawer, checkout, demó fizetés)
    A kosár-út szándékosan gsap-mentes: tiszta CSS transition + JS osztályok.
    ========================================================================== */
 
@@ -12,7 +12,7 @@
 /* ============ KATEGÓRIA-TABSOR (K9) ============ */
 .tabs-wrap{position:sticky;top:0;z-index:120;background:rgba(18,19,22,.96);
   border-bottom:1px solid var(--line);margin-top:2rem;transition:top .45s var(--ease)}
-/* ha a fejléc látszik, a tabsor alá csúszik — így mindkettő kattintható */
+/* ha a fejléc látszik, a tabsor alá csúszik, így mindkettő kattintható */
 body.nav-shown .tabs-wrap{top:var(--navh,66px)}
 .tabs{position:relative;display:flex;gap:.4rem;overflow-x:auto;scrollbar-width:none;padding:0 var(--pad);max-width:var(--maxw);margin:0 auto}
 .tabs::-webkit-scrollbar{display:none}

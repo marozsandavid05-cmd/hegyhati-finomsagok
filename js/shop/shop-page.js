@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HEGYHÁTI FINOMSÁGOK — bolt-oldal (termekek.html)
+   HEGYHÁTI FINOMSÁGOK, bolt-oldal (termekek.html)
    Kategória-szekciók render + K9 sticky tabsor csúszó indikátorral + scrollspy.
    ========================================================================== */
 (function () {

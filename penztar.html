@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.className += ' js';</script>
-<title>Pénztár — Hegyháti Finomságok</title>
-<meta name="description" content="Rendelés leadása — átvétel az üzletben vagy házhozszállítás Pécsen és 40 km-es körzetben.">
+<title>Pénztár · Hegyháti Finomságok</title>
+<meta name="description" content="Rendelés leadása, átvétel az üzletben vagy házhozszállítás Pécsen és 40 km-es körzetben.">
 <meta name="robots" content="noindex,follow">
 <link rel="icon" type="image/png" href="media/logo-emblem.png">
 <link rel="stylesheet" href="css/fonts.css">
@@ -44,7 +44,7 @@
   <a href="szallitas.html">Szállítás</a>
   <a href="kapcsolat.html">Kapcsolat</a>
   <div class="mnav__foot">
-    Pécsi Vásárcsarnok · szerda és péntek 8:00–11:00<br>
+    Pécsi Vásárcsarnok · kedd-péntek 6:00-14:00 · szombat 6:00-12:00<br>
     <a href="tel:+36303007422">+36 30 300 7422</a>
   </div>
 </div>
@@ -54,7 +54,7 @@
   <h1 style="font-size:var(--step-3);margin-top:1rem">Rendelés leadása</h1>
 
   <div id="coEmpty" style="display:none;padding:3.4rem 0">
-    <p style="color:var(--muted);font-size:var(--step-1)">A kosara üres — válogasson a finomságaink közül.</p>
+    <p style="color:var(--muted);font-size:var(--step-1)">A kosara üres, válogasson a finomságaink közül.</p>
     <a href="termekek.html" class="btn btn--solid" style="margin-top:1.6rem">Termékek böngészése</a>
   </div>
 
@@ -64,7 +64,7 @@
       <section class="co-block">
         <h2><span class="n">1</span>Rendelés áttekintése</h2>
         <div class="co-items" id="coItems" data-lenis-prevent></div>
-        <div class="sum-note">A feltüntetett összeg becslés. Mérlegelt árut adunk — a pontos végösszeg a mérés után, átvételkor derül ki, telefonon egyeztetjük.</div>
+        <div class="sum-note">A feltüntetett összeg becslés. Mérlegelt árut adunk. A pontos végösszeg a mérés után, átvételkor derül ki, telefonon egyeztetjük.</div>
       </section>
 
       <!-- 2 · Átvétel -->
@@ -79,7 +79,7 @@
                 Átvétel az üzletben
                 <span class="pick__fee">ingyenes</span>
               </span>
-              <span class="pick__desc">Pécsi Vásárcsarnok · szerda és péntek 8:00–11:00</span>
+              <span class="pick__desc">Pécsi Vásárcsarnok · kedd-péntek 6:00-14:00 · szombat 6:00-12:00</span>
             </span>
           </label>
           <label class="pick">
@@ -100,8 +100,11 @@
           <div class="fld">
             <label for="pickupDay">Melyik napon jönne?</label>
             <select id="pickupDay">
-              <option value="szerda">Szerda (8:00–11:00)</option>
-              <option value="pentek">Péntek (8:00–11:00)</option>
+              <option value="kedd">Kedd (6:00-14:00)</option>
+              <option value="szerda">Szerda (6:00-14:00)</option>
+              <option value="csutortok">Csütörtök (6:00-14:00)</option>
+              <option value="pentek">Péntek (6:00-14:00)</option>
+              <option value="szombat">Szombat (6:00-12:00)</option>
             </select>
           </div>
         </div>
@@ -185,7 +188,7 @@
                 Online bankkártya
                 <span class="pick__fee" id="cardDemoTag">DEMÓ</span>
               </span>
-              <span class="pick__desc" id="cardDesc">Biztonságos online fizetés — jelenleg bemutató módban, valódi terhelés nem történik.</span>
+              <span class="pick__desc" id="cardDesc">Biztonságos online fizetés, jelenleg bemutató módban, valódi terhelés nem történik.</span>
             </span>
           </label>
         </div>
@@ -197,7 +200,7 @@
       <section class="co-block">
         <h2 style="font-size:1.35rem">Összegzés</h2>
         <div class="sum-rows" id="sumRows"></div>
-        <div class="sum-note">Becsült összeg — mérés után pontosítjuk.</div>
+        <div class="sum-note">Becsült összeg, mérés után pontosítjuk.</div>
         <div class="co-legal">
           <label class="check-line">
             <input type="checkbox" id="accTerms">
@@ -210,7 +213,7 @@
           <p class="err-msg" id="legalErr" style="display:none;color:#E08379;font-size:.83rem">A rendeléshez mindkét jelölő elfogadása szükséges.</p>
         </div>
         <button class="btn btn--solid" type="submit" id="submitBtn">Megrendelés elküldése</button>
-        <p style="font-size:.78rem;color:var(--muted);margin-top:.9rem;text-align:center" id="demoLine">Demó üzemmód: a rendelés még nem kerül elküldésre.</p>
+        <p style="font-size:.78rem;color:var(--muted);margin-top:.9rem;text-align:center" id="demoLine">Rendelés és kiszállítás augusztus 17-től elérhető az oldalon.</p>
       </section>
     </aside>
   </form>

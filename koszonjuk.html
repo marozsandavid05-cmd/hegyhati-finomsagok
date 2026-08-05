@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script>document.documentElement.className += ' js';</script>
-<title>Köszönjük a rendelését! — Hegyháti Finomságok</title>
+<title>Köszönjük a rendelését! · Hegyháti Finomságok</title>
 <meta name="robots" content="noindex,nofollow">
 <link rel="icon" type="image/png" href="media/logo-emblem.png">
 <link rel="stylesheet" href="css/fonts.css">
@@ -49,7 +49,7 @@
     <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l5 5L19.5 7"/></svg>
   </div>
   <h1>Köszönjük a rendelését!</h1>
-  <p class="thanks__oid">Rendelés-azonosító: <b id="thOid" class="num-tab">—</b> · <span id="thStatus"></span></p>
+  <p class="thanks__oid">Rendelés-azonosító: <b id="thOid" class="num-tab">…</b> · <span id="thStatus"></span></p>
   <p class="lead" style="margin-top:1.2rem">Hamarosan <strong style="color:var(--ink)">telefonon visszahívjuk</strong> a megadott számon, hogy egyeztessük a pontos súlyokat, a végösszeget és az átvétel részleteit. Mérlegelt árut adunk, így a végösszeg a mérés után válik véglegessé.</p>
 
   <div class="co-block thanks__box">
@@ -59,7 +59,7 @@
 
   <div class="co-block" id="thPickupBox" style="display:none">
     <h2 style="font-size:1.35rem;margin-bottom:.9rem">Átvétel az üzletben</h2>
-    <p style="color:var(--muted)">Pécsi Vásárcsarnok · <span id="thDay"></span> 8:00–11:00<br>Kérjük, a rendelés-azonosítót hozza magával (elég a telefonján).</p>
+    <p style="color:var(--muted)">Pécsi Vásárcsarnok · <span id="thDay"></span><br>Kérjük, a rendelés-azonosítót hozza magával (elég a telefonján).</p>
   </div>
 
   <div class="co-block" id="thDeliveryBox" style="display:none">
@@ -68,7 +68,7 @@
   </div>
 
   <p id="thDemo" style="margin-top:1.6rem;padding:.9rem 1.2rem;border:1px solid rgba(217,152,56,.4);border-radius:10px;background:rgba(217,152,56,.1);color:var(--accent-soft);font-size:.9rem;display:none">
-    Ez egy bemutató (demó) rendelés volt — a webshop élesítése után a rendelések ténylegesen beérkeznek hozzánk.
+    Ez egy bemutató (demó) rendelés volt. Rendelés és kiszállítás augusztus 17-től elérhető az oldalon.
   </p>
 
   <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2.2rem">
@@ -114,15 +114,16 @@
 
   if (order.fulfillment.method === 'pickup') {
     document.getElementById('thPickupBox').style.display = '';
-    document.getElementById('thDay').textContent = order.fulfillment.day === 'pentek' ? 'péntek' : 'szerda';
+    const dayInfo = { kedd: 'kedd, 6:00-14:00', szerda: 'szerda, 6:00-14:00', csutortok: 'csütörtök, 6:00-14:00', pentek: 'péntek, 6:00-14:00', szombat: 'szombat, 6:00-12:00' };
+    document.getElementById('thDay').textContent = dayInfo[order.fulfillment.day] || dayInfo.kedd;
   } else {
     document.getElementById('thDeliveryBox').style.display = '';
     const a = order.fulfillment.address;
-    document.getElementById('thAddr').textContent = a.zip + ' ' + a.city + ', ' + a.street + ' — hűtve szállítjuk, az időpontot telefonon egyeztetjük.';
+    document.getElementById('thAddr').textContent = a.zip + ' ' + a.city + ', ' + a.street + ', hűtve szállítjuk, az időpontot telefonon egyeztetjük.';
   }
   if (order.meta && order.meta.demo) document.getElementById('thDemo').style.display = 'block';
 
-  /* A kosár ITT ürül — a rendelés sikeres lezárultával. */
+  /* A kosár ITT ürül, a rendelés sikeres lezárultával. */
   if (window.HFCART) HFCART.clear();
 })();
 </script>

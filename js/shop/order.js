@@ -1,7 +1,7 @@
 /* ==========================================================================
-   HEGYHÁTI FINOMSÁGOK — rendelés-objektum kezelés
+   HEGYHÁTI FINOMSÁGOK, rendelés-objektum kezelés
    Demó fázis: a rendelés localStorage-ba kerül (hf_last_order_v1).
-   ÉLES seam: submitOrder() küldene POST /api/order-t (CF Pages Function) —
+   ÉLES seam: submitOrder() küldene POST /api/order-t (CF Pages Function),
    lásd functions/README.md. A frontend hívási pontja már most itt van.
    ========================================================================== */
 (function () {
@@ -57,7 +57,7 @@
   }
 
   /* ÉLES seam: itt menne ki a rendelés e-mail/notifikáció a boltnak.
-     Demóban no-op — a functions/api/order.js bekötése után:
+     Demóban no-op, a functions/api/order.js bekötése után:
      fetch('/api/order', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(order)}) */
   function submitOrder(order) {
     if (HF.FLAGS.DEMO_MODE) return Promise.resolve({ ok: true, demo: true });

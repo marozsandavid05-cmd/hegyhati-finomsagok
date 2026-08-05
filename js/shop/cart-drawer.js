@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HEGYHÁTI FINOMSÁGOK — kosár-drawer + toast (JS-injektált, minden oldalon)
+   HEGYHÁTI FINOMSÁGOK, kosár-drawer + toast (JS-injektált, minden oldalon)
    Szándékosan gsap-mentes: CSS transition + osztályok. Lenis stop/start kötelező.
    ========================================================================== */
 (function () {
@@ -173,7 +173,7 @@
   if (!HFCART.storageOk()) {
     const bar = document.createElement('div');
     bar.style.cssText = 'position:fixed;bottom:0;left:0;right:0;z-index:500;background:#2A2620;color:#E8B96A;font-size:.82rem;text-align:center;padding:.55rem 1rem';
-    bar.textContent = 'A böngésző tárolása nem elérhető — a kosár tartalma az oldal bezárásakor elveszhet.';
+    bar.textContent = 'A böngésző tárolása nem elérhető, a kosár tartalma az oldal bezárásakor elveszhet.';
     document.body.appendChild(bar);
   }
 })();

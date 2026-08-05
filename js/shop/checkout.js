@@ -1,8 +1,8 @@
 /* ==========================================================================
-   HEGYHÁTI FINOMSÁGOK — pénztár (penztar.html)
+   HEGYHÁTI FINOMSÁGOK, pénztár (penztar.html)
    Tétel-áttekintés (szerkeszthető) + átvétel/zóna + validáció + összegzés +
    rendelés-objektum → fizetés (cod: köszönő oldal · card: provider-seam).
-   A kosár ITT MÉG NEM ürül — csak a köszönő oldalon.
+   A kosár ITT MÉG NEM ürül, csak a köszönő oldalon.
    ========================================================================== */
 (function () {
   const form = document.getElementById('coForm');
@@ -94,7 +94,7 @@
     delFeeTag.textContent = est >= HF.SHIPPING.freeAbove ? 'ingyenes' : ('+' + fmt(HF.SHIPPING.zones[s.zone].fee));
 
     if (s.method === 'delivery' && est < HF.SHIPPING.minOrder) {
-      minOrderHint.innerHTML = `Házhozszállításhoz a minimum rendelési érték <b style="color:var(--accent-soft)">${fmt(HF.SHIPPING.minOrder)}</b> — még <b style="color:var(--accent-soft)">~${fmt(HF.SHIPPING.minOrder - est)}</b> hiányzik. <a href="termekek.html" style="text-decoration:underline">Válogatok még →</a>`;
+      minOrderHint.innerHTML = `Házhozszállításhoz a minimum rendelési érték <b style="color:var(--accent-soft)">${fmt(HF.SHIPPING.minOrder)}</b>, még <b style="color:var(--accent-soft)">~${fmt(HF.SHIPPING.minOrder - est)}</b> hiányzik. <a href="termekek.html" style="text-decoration:underline">Válogatok még →</a>`;
     } else if (s.method === 'delivery') {
       minOrderHint.innerHTML = est >= HF.SHIPPING.freeAbove
         ? 'A rendelése elérte az ingyenes szállítási küszöböt.'

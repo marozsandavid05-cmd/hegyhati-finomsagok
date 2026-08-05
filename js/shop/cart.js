@@ -1,7 +1,7 @@
 /* ==========================================================================
-   HEGYHÁTI FINOMSÁGOK — kosár-állapot (localStorage + in-memory fallback)
-   Kulcs: productId|spice|sliced — azonos sorok összevonódnak.
-   Minden ár BECSÜLT (kg-alapú mérlegelt áru) — a UI mindig „~” jellel mutatja.
+   HEGYHÁTI FINOMSÁGOK, kosár-állapot (localStorage + in-memory fallback)
+   Kulcs: productId|spice|sliced, azonos sorok összevonódnak.
+   Minden ár BECSÜLT (kg-alapú mérlegelt áru), a UI mindig „~” jellel mutatja.
    ========================================================================== */
 (function () {
   const KEY = 'hf_cart_v1';

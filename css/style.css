@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HEGYHÁTI FINOMSÁGOK — „Füstház" design-rendszer
+   HEGYHÁTI FINOMSÁGOK, „Füstház" design-rendszer
    Art direction: faszén + borostyán, füstölőkamra-hangulat.
    Robusztus gerinc: a kritikus vizuál CSS/IO-alapú, gsap csak extra.
    ========================================================================== */
@@ -13,7 +13,7 @@
   --muted:#9BA0A6;           /* halvány szöveg (kontraszt-emelt) */
   --accent:#D99838;          /* borostyán */
   --accent-soft:#E8B96A;     /* világosabb borostyán (szöveghez sötéten) */
-  --paper:#EFE7DA;           /* krém „hentespapír” — pecsét, világos chip */
+  --paper:#EFE7DA;           /* krém „hentespapír”, pecsét, világos chip */
   --paper-ink:#211D18;       /* sötét szöveg a paper felületen */
   --line:rgba(235,232,226,.13);
   --font-display:'Boska',Georgia,serif;
@@ -55,7 +55,7 @@ section{position:relative;padding-block:clamp(4rem,11vh,9rem)}
 .num-tab{font-variant-numeric:tabular-nums}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 
-/* ============ ATMOSZFÉRA-RÉTEG (amb) — body-szintű, z:-1, sose tiszta fekete ============ */
+/* ============ ATMOSZFÉRA-RÉTEG (amb), body-szintű, z:-1, sose tiszta fekete ============ */
 .amb{position:fixed;inset:0;z-index:-1;pointer-events:none;background:var(--base)}
 .amb::before{content:'';position:absolute;inset:0;
   background:
@@ -106,7 +106,7 @@ section{position:relative;padding-block:clamp(4rem,11vh,9rem)}
 .mnav a small{display:inline-block;margin-left:.9rem;font-family:var(--font-body);font-size:.8rem;color:var(--accent);letter-spacing:.2em}
 .mnav__foot{margin-top:2.4rem;color:var(--muted);font-size:.9rem;line-height:1.9}
 
-/* ============ HERO (index) — ken-burns + spotlight + grain, CSS-alap ============ */
+/* ============ HERO (index), ken-burns + spotlight + grain, CSS-alap ============ */
 .hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;padding-bottom:7vh;overflow:clip}
 .hero__media{position:absolute;inset:0;z-index:-1;overflow:hidden}
 .hero__media img{width:100%;height:100%;object-fit:cover;transform-origin:62% 40%}
@@ -155,7 +155,7 @@ section{position:relative;padding-block:clamp(4rem,11vh,9rem)}
 .js [data-reveal][data-delay="2"].in{transition-delay:.16s}
 .js [data-reveal][data-delay="3"].in{transition-delay:.24s}
 
-/* ============ SZEKCIÓ-ELVÁLASZTÓK — opálos lip (SOHA szín-a-színbe) ============ */
+/* ============ SZEKCIÓ-ELVÁLASZTÓK, opálos lip (SOHA szín-a-színbe) ============ */
 .lip{position:relative;z-index:2;background:var(--surface);border-radius:var(--r-lip) var(--r-lip) 0 0;margin-top:-5vh;
   box-shadow:0 -28px 48px -22px rgba(0,0,0,.55)}
 .lip::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;border-radius:inherit;

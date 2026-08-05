@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HEGYHÁTI FINOMSÁGOK — robusztus gerinc (main.js)
+   HEGYHÁTI FINOMSÁGOK, robusztus gerinc (main.js)
    A kritikus vizuál (reveal, hero, nav, sticky galéria) CSS/IO-alapú.
    A gsap CSAK degradálható extra (parallax, scrub, magnetic).
    ========================================================================== */
@@ -124,7 +124,7 @@ document.querySelectorAll('.ba').forEach(ba => {
 });
 
 /* =========================================================================
-   LENIS — helyesen: self-rAF, lenis.css a style.css-ben, overflow-x:clip
+   LENIS, helyesen: self-rAF, lenis.css a style.css-ben, overflow-x:clip
    ========================================================================= */
 window.lenis = null;
 if (!reduce && typeof Lenis !== 'undefined') {
@@ -156,7 +156,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* =========================================================================
-   Újrapróbálkozó idle-refresh (Lenis alatt kötelező — elavult pin-végek ellen)
+   Újrapróbálkozó idle-refresh (Lenis alatt kötelező, elavult pin-végek ellen)
    ========================================================================= */
 let lastScrollT = 0;
 addEventListener('scroll', () => { lastScrollT = performance.now(); }, { passive: true });
@@ -214,7 +214,7 @@ if (hasGSAP && !reduce && typeof ScrollTrigger !== 'undefined') {
   });
 }
 
-/* ---- Magnetic gombok (K1) — csak egér, degradálható ---- */
+/* ---- Magnetic gombok (K1), csak egér, degradálható ---- */
 if (hasGSAP && !reduce && !touch) {
   document.querySelectorAll('[data-magnet]').forEach(btn => {
     btn.addEventListener('mousemove', e => {

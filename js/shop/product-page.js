@@ -1,5 +1,5 @@
 /* ==========================================================================
-   HEGYHÁTI FINOMSÁGOK — termékoldal (termek.html?id=<slug>)
+   HEGYHÁTI FINOMSÁGOK, termékoldal (termek.html?id=<slug>)
    Client-side render + súly-stepper + opciók + élő becsült ár + mobil buybar.
    Rossz id → visszairányítás a terméklistára.
    ========================================================================== */
@@ -13,7 +13,7 @@
   if (!p) { location.replace('termekek.html'); return; }
   const cat = HFDATA.getCategory(p.category);
 
-  document.title = p.name + ' — Hegyháti Finomságok';
+  document.title = p.name + ' · Hegyháti Finomságok';
 
   /* ---- morzsamenü ---- */
   const SEP = '<svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M9 6l6 6-6 6"/></svg>';
@@ -38,7 +38,7 @@
             <input type="text" id="wIn" inputmode="decimal" value="${String(w.default).replace('.', ',')}" aria-label="Súly kilogrammban">
             <button type="button" data-st="up" aria-label="Több">+</button>
           </div>
-          <span style="margin-left:.8rem;color:var(--muted);font-size:.9rem">kg (${String(w.min).replace('.', ',')}–${String(w.max).replace('.', ',')} kg, ${String(w.step).replace('.', ',')} kg lépésben)</span>
+          <span style="margin-left:.8rem;color:var(--muted);font-size:.9rem">kg (${String(w.min).replace('.', ',')}-${String(w.max).replace('.', ',')} kg, ${String(w.step).replace('.', ',')} kg lépésben)</span>
         </div>
         ${p.options.spice ? `
         <div>

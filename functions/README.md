@@ -1,7 +1,7 @@
-# Cloudflare Pages Functions — ÉLES bekötési pont (most ÜRES, szándékosan)
+# Cloudflare Pages Functions, ÉLES bekötési pont (most ÜRES, szándékosan)
 
 A webshop jelenleg **demó módban** fut (`js/config.js` → `FLAGS.DEMO_MODE: true`,
-`PAYMENT_PROVIDER: 'demo'`). A frontend már fel van készítve az élesítésre —
+`PAYMENT_PROVIDER: 'demo'`). A frontend már fel van készítve az élesítésre,
 **frontend-átírás nélkül** csak az alábbiak kellenek:
 
 ## 1. Barion Smart Gateway (online kártyás fizetés)
@@ -21,7 +21,7 @@ Fájlok, amiket ide kell megírni éleskor:
 - `functions/api/order.js`
   - POST body: a teljes rendelés-objektum (a frontend `js/shop/order.js` →
     `submitOrder()` már hívja, demóban no-op)
-  - Email küldés a boltnak (pl. MailChannels — Cloudflare Pages-ből ingyenes),
+  - Email küldés a boltnak (pl. MailChannels, Cloudflare Pages-ből ingyenes),
     címzett: hegyhatihus@gmail.com
 
 ## 3. Élesítési checklist (sorrendben)

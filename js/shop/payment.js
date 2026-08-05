@@ -1,7 +1,7 @@
 /* ==========================================================================
-   HEGYHÁTI FINOMSÁGOK — fizetési provider-seam
+   HEGYHÁTI FINOMSÁGOK, fizetési provider-seam
    FLAGS.PAYMENT_PROVIDER: 'demo' (most) | 'barion' (éleskor).
-   Éles Barion-bekötéskor CSAK a functions/api/payment/* jön létre + a flag vált —
+   Éles Barion-bekötéskor CSAK a functions/api/payment/* jön létre + a flag vált,
    ez a fájl és a frontend többi része NEM változik. Lásd functions/README.md.
    ========================================================================== */
 (function () {
