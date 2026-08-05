@@ -30,15 +30,26 @@ function heroIn() {
 addEventListener('load', () => setTimeout(heroIn, reduce ? 0 : 120));
 setTimeout(heroIn, 2400); /* safety net */
 
-/* ---- NAV (RB4): hide-on-scroll + scrolled háttér ---- */
+/* ---- NAV (RB4): hide-on-scroll + scrolled háttér ----
+   Hiszterézis: csak NAV_DELTA px egyirányú görgetés után vált, így a Lenis
+   kifutó 1px-es eseményei és a touch-momentum nem villogtatják megálláskor. */
 const nav = document.querySelector('.nav');
-let lastY = 0;
+const NAV_DELTA = 14;
+let lastY = 0, navAcc = 0;
 function navTick() {
-  const y = scrollY;
+  const y = Math.max(0, scrollY); /* iOS overscroll-bounce ellen */
   if (nav) {
     nav.classList.toggle('nav--scrolled', y > 40);
-    if (y > lastY && y > 260 && !document.body.classList.contains('menu-open')) nav.classList.add('nav--hidden');
-    else nav.classList.remove('nav--hidden');
+    const d = y - lastY;
+    if (document.body.classList.contains('menu-open') || y < 120) {
+      nav.classList.remove('nav--hidden');
+      navAcc = 0;
+    } else if (d !== 0) {
+      navAcc = (navAcc > 0) === (d > 0) ? navAcc + d : d; /* irányváltásnál újraindul */
+      if (navAcc > NAV_DELTA && y > 260) nav.classList.add('nav--hidden');
+      else if (navAcc < -NAV_DELTA) nav.classList.remove('nav--hidden');
+      /* a két küszöb között az állapot NEM változik, ezért nincs villogás */
+    }
     /* a sticky elemek (pl. kategória-tabsor) a látható nav ALÁ csússzanak */
     document.body.classList.toggle('nav-shown', !nav.classList.contains('nav--hidden'));
   }
