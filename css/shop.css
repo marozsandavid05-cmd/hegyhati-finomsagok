@@ -177,7 +177,8 @@ body.kb-open .buybar{display:none}  /* iOS billentyűzet nyitva → sáv el */
 .fld .err-msg{display:none;font-size:.8rem;color:#E08379;margin-top:.4rem}
 .fld.err .err-msg{display:block}
 .pick-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
-@media(max-width:560px){.pick-cards{grid-template-columns:1fr}}
+/* telefonon a két kártya egymás alá kerül (szűk hasábban kilógott a szöveg) */
+@media(max-width:720px){.pick-cards{grid-template-columns:1fr}}
 .pick{position:relative;cursor:pointer}
 .pick input{position:absolute;inset:0;opacity:0;cursor:pointer}
 .pick__body{position:relative;display:flex;flex-direction:column;gap:.35rem;padding:1.15rem 2.6rem 1.15rem 1.25rem;border:1px solid var(--line);border-radius:12px;background:var(--base);transition:border-color .25s,background .25s;height:100%}
@@ -187,7 +188,7 @@ body.kb-open .buybar{display:none}  /* iOS billentyűzet nyitva → sáv el */
 .pick input:checked~.pick__body{border-color:var(--accent);background:rgba(217,152,56,.07)}
 .pick input:checked~.pick__body::after{opacity:1;transform:scale(1)}
 .pick input:focus-visible~.pick__body{outline:2px solid var(--accent);outline-offset:2px}
-.pick__title{display:flex;align-items:center;gap:.6rem;font-weight:600}
+.pick__title{display:flex;align-items:center;flex-wrap:wrap;gap:.6rem;font-weight:600}
 .pick__title svg{width:18px;height:18px;stroke:var(--accent)}
 .pick__desc{font-size:.85rem;color:var(--muted)}
 .pick__fee{margin-left:auto;font-weight:600;color:var(--accent-soft);font-size:.9rem}

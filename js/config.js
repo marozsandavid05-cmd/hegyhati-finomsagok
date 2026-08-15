@@ -2,11 +2,10 @@
    HEGYHÁTI FINOMSÁGOK, központi konfiguráció
    --------------------------------------------------------------------------
    MINTA-ADATOK KÖZPONTI LISTÁJA (éles előtt EZEKET kell cserélni):
-     1. SITE.address       = pontos bolt-cím a Pécsi Vásárcsarnokban (MINTA!)
-     2. SHIPPING.*         = szállítási díjak, min. rendelés, ingyenes küszöb (MINTA!)
-     3. LEGAL.*            = cégadatok az impresszumhoz/ÁSZF-hez (MINTA!)
-     4. FLAGS.DEMO_MODE    = élesítéskor false
-     5. FLAGS.PAYMENT_PROVIDER = élesítéskor 'barion' (functions/ + POSKey env kell,
+     1. SHIPPING.*         = szállítási díjak, min. rendelés, ingyenes küszöb (MINTA!)
+     2. LEGAL.*            = cégadatok az impresszumhoz/ÁSZF-hez (MINTA!)
+     3. FLAGS.DEMO_MODE    = élesítéskor false
+     4. FLAGS.PAYMENT_PROVIDER = élesítéskor 'barion' (functions/ + POSKey env kell,
         lásd functions/README.md)
    ========================================================================== */
 
@@ -17,14 +16,13 @@ const SITE = {
   phoneHref: 'tel:+36303007422',
   email: 'hegyhatihus@gmail.com',
   facebook: 'https://www.facebook.com/profile.php?id=61588375946089',
-  /* MINTA: a pontos utca-cím a vásárcsarnokon belül egyeztetendő az ügyféllel */
-  address: 'Pécsi Vásárcsarnok (MINTA: pontos cím egyeztetés alatt)',
-  addressShort: 'Pécsi Vásárcsarnok',
+  address: 'Pécsi Vásárcsarnok · Zólyom u. 4., 7622 Pécs',
+  addressShort: 'Pécsi Vásárcsarnok · Zólyom u. 4.',
   city: 'Pécs',
   openingDays: 'keddtől szombatig',
   openingHours: '6:00-14:00, szombaton 6:00-12:00',
   openingLine: 'Keddtől péntekig 6:00-14:00, szombaton 6:00-12:00',
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=P%C3%A9csi+V%C3%A1s%C3%A1rcsarnok',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Z%C3%B3lyom+u.+4%2C+7622+P%C3%A9cs',
 };
 
 /* MINTA szállítási díjszabás, az ügyféllel egyeztetendő! */
