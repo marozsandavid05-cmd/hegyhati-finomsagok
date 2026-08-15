@@ -4,4 +4,4 @@ Disallow: /penztar.html
 Disallow: /fizetes-demo.html
 Disallow: /koszonjuk.html
 
-Sitemap: https://hegyhatihusbolt.hu/sitemap.xml
+Sitemap: https://hegyhatifinomsagok.com/sitemap.xml

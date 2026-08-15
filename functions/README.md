@@ -28,7 +28,7 @@ Fájlok, amiket ide kell megírni éleskor:
 
 1. Valós cégadatok kitöltése: `js/config.js` (SITE.address, SHIPPING díjak, LEGAL.*)
    + a 4 jogi oldal MINTA-szövegeinek véglegesítése (ÁSZF-be Barion-klauzula kell!)
-2. Domain HTTPS-en él (Cloudflare Pages + hegyhatihusbolt.hu)
+2. Domain HTTPS-en él (Cloudflare Pages + hegyhatifinomsagok.com)
 3. Barion kereskedői fiók + POSKey → `BARION_POSKEY` env a Pages projektben
 4. A fenti functions fájlok megírása
 5. `js/config.js`: `DEMO_MODE: false`, `PAYMENT_PROVIDER: 'barion'`

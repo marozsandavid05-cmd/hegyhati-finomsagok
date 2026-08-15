@@ -11,18 +11,18 @@
 
 const SITE = {
   name: 'Hegyháti Finomságok',
-  domain: 'hegyhatihusbolt.hu',
+  domain: 'hegyhatifinomsagok.com',
   phone: '+36 30 300 7422',
   phoneHref: 'tel:+36303007422',
   email: 'hegyhatihus@gmail.com',
   facebook: 'https://www.facebook.com/profile.php?id=61588375946089',
-  address: 'Pécsi Vásárcsarnok · Zólyom u. 4., 7622 Pécs',
-  addressShort: 'Pécsi Vásárcsarnok · Zólyom u. 4.',
+  address: 'Pécsi Vásárcsarnok',
+  addressShort: 'Pécsi Vásárcsarnok',
   city: 'Pécs',
   openingDays: 'keddtől szombatig',
   openingHours: '6:00-14:00, szombaton 6:00-12:00',
   openingLine: 'Keddtől péntekig 6:00-14:00, szombaton 6:00-12:00',
-  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Z%C3%B3lyom+u.+4%2C+7622+P%C3%A9cs',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=P%C3%A9csi+V%C3%A1s%C3%A1rcsarnok',
 };
 
 /* MINTA szállítási díjszabás, az ügyféllel egyeztetendő! */
