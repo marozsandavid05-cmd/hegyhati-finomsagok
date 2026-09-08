@@ -1,7 +1,7 @@
 /* ==========================================================================
    HEGYHÁTI FINOMSÁGOK, rendelés-objektum kezelés
    Demó fázis: a rendelés localStorage-ba kerül (hf_last_order_v1).
-   ÉLES seam: submitOrder() küldene POST /api/order-t (CF Pages Function),
+   ÉLES seam: submitOrder() küld POST /api/order-t (CF Pages Function),
    lásd functions/README.md. A frontend hívási pontja már most itt van.
    ========================================================================== */
 (function () {
@@ -16,15 +16,15 @@
 
   function build(customer, fulfillment, paymentMethod) {
     const items = HFCART.items().map(i => ({
-      productId: i.productId, name: i.product.name, weightKg: i.weightKg,
+      productId: i.productId, name: i.product.name,
+      unit: i.unit, qty: i.qty, qtyLabel: i.qtyLabel, estKg: i.estKg,
       spice: i.spice, sliced: i.sliced, note: i.note,
-      unitPrice: i.product.price, estLinePrice: i.estPrice,
+      unitPrice: i.product.price, priceUnit: i.product.priceUnit || 'kg', estLinePrice: i.estPrice,
     }));
     const estSubtotal = items.reduce((s, i) => s + i.estLinePrice, 0);
     let shippingFee = 0;
     if (fulfillment.method === 'delivery') {
-      const zone = HF.SHIPPING.zones[fulfillment.zone];
-      shippingFee = (estSubtotal >= HF.SHIPPING.freeAbove) ? 0 : (zone ? zone.fee : 0);
+      shippingFee = (estSubtotal >= HF.SHIPPING.freeAbove) ? 0 : HF.SHIPPING.feeFor(fulfillment.town);
     }
     return {
       id: genId(),
@@ -37,7 +37,7 @@
       },
       customer, fulfillment,
       payment: { method: paymentMethod, provider: HF.FLAGS.PAYMENT_PROVIDER, status: 'pending' },
-      meta: { demo: HF.FLAGS.DEMO_MODE, disclaimerAccepted: true },
+      meta: { demo: HF.FLAGS.DEMO_MODE, disclaimerAccepted: true, priceNote: HF.PRICE_NOTE.short },
     };
   }
 
@@ -56,9 +56,8 @@
     return o;
   }
 
-  /* ÉLES seam: itt menne ki a rendelés e-mail/notifikáció a boltnak.
-     Demóban no-op, a functions/api/order.js bekötése után:
-     fetch('/api/order', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(order)}) */
+  /* ÉLES seam: itt megy ki a rendelés e-mail/notifikáció a boltnak.
+     Demóban no-op, a functions/api/order.js bekötése után POST /api/order. */
   function submitOrder(order) {
     if (HF.FLAGS.DEMO_MODE) return Promise.resolve({ ok: true, demo: true });
     return fetch('/api/order', {

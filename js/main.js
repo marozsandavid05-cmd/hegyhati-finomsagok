@@ -5,6 +5,16 @@
    ========================================================================== */
 
 const reduce  = matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+/* ---- INTELLIGENS URL-EK: http(s) alatt a statikus .html linkekről lekerül a kiterjesztés
+   (/termekek, /sonka, /termek/kulen). file://-en (dupla kattintás) marad a .html. ---- */
+if (window.HF && HF.cleanUrl && /^https?:$/.test(location.protocol)) {
+  document.querySelectorAll('a[href]').forEach(a => {
+    const h = a.getAttribute('href');
+    const c = HF.cleanUrl(h);
+    if (c !== h) a.setAttribute('href', c);
+  });
+}
 const touch   = matchMedia('(hover:none)').matches;
 const hasGSAP = typeof gsap !== 'undefined';
 

@@ -21,12 +21,15 @@ Fájlok, amiket ide kell megírni éleskor:
 - `functions/api/order.js`
   - POST body: a teljes rendelés-objektum (a frontend `js/shop/order.js` →
     `submitOrder()` már hívja, demóban no-op)
+  - Tétel-mezők (2026-09 óta): `unit` ('kg' | 'db'), `qty`, `qtyLabel` (pl. „2 pár (kb. 1 kg)"),
+    `estKg`, `priceUnit`, `estLinePrice`; minden ár tájékoztató jellegű (`meta.priceNote`)
+  - Kiszállításnál `fulfillment`: `{ method:'delivery', town, day ('Péntek'|'Szombat'), zone, address }`
   - Email küldés a boltnak (pl. MailChannels, Cloudflare Pages-ből ingyenes),
     címzett: hegyhatihus@gmail.com
 
 ## 3. Élesítési checklist (sorrendben)
 
-1. Valós cégadatok kitöltése: `js/config.js` (SITE.address, SHIPPING díjak, LEGAL.*)
+1. Valós cégadatok kitöltése: `js/config.js` (LEGAL.*; a cím és a SHIPPING díjak már az átnézett ÁSZF szerint)
    + a 4 jogi oldal MINTA-szövegeinek véglegesítése (ÁSZF-be Barion-klauzula kell!)
 2. Domain HTTPS-en él (Cloudflare Pages + hegyhatifinomsagok.com)
 3. Barion kereskedői fiók + POSKey → `BARION_POSKEY` env a Pages projektben

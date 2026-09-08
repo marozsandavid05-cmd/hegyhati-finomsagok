@@ -6,13 +6,14 @@
 <script>document.documentElement.className += ' js';</script>
 <title>Történetünk · Hegyháti Finomságok</title>
 <meta name="description" content="Egy pécsi őstermelő házaspár története: saját tenyésztésű állatok, saját termesztésű takarmány, családi receptek, így születik a Hegyháti Finomságok minden terméke.">
-<link rel="canonical" href="https://hegyhatifinomsagok.com/rolunk.html">
+<link rel="canonical" href="https://hegyhatifinomsagok.com/rolunk">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Történetünk · Hegyháti Finomságok">
 <meta property="og:description" content="Saját földből, saját kézből. Egy pécsi őstermelő házaspár kézműves húsműhelye.">
 <meta property="og:image" content="https://hegyhatifinomsagok.com/media/stock/og-image.jpg">
 <meta property="og:locale" content="hu_HU">
-<link rel="icon" type="image/png" href="media/logo-emblem.png">
+<link rel="icon" type="image/png" sizes="256x256" href="media/favicon.png">
+<link rel="apple-touch-icon" href="media/apple-touch-icon.png">
 <link rel="stylesheet" href="css/fonts.css">
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/shop.css">
@@ -21,16 +22,17 @@
 
 <div class="amb" aria-hidden="true"><div class="amb__vig"></div></div>
 
+<!-- @nav -->
 <nav class="nav" aria-label="Fő navigáció">
   <a href="index.html" class="nav__brand">
-    <strong>Hegyháti</strong>
-    <small>Finomságok</small>
+    <img class="nav__logo" src="media/logo-hegyhati.webp" alt="" width="42" height="42">
+    <span><strong>Hegyháti</strong><small>Finomságok</small></span>
   </a>
   <div class="nav__links">
     <a href="index.html" class="nav__link">Főoldal</a>
     <a href="termekek.html" class="nav__link">Termékek</a>
+    <a href="kiszallitas.html" class="nav__link">Kiszállítás / Előrendelés</a>
     <a href="rolunk.html" class="nav__link" aria-current="page">Történetünk</a>
-    <a href="szallitas.html" class="nav__link">Szállítás</a>
     <a href="kapcsolat.html" class="nav__link">Kapcsolat</a>
   </div>
   <div class="nav__cta">
@@ -41,18 +43,21 @@
     <button class="burger" aria-label="Menü" aria-expanded="false"><span></span></button>
   </div>
 </nav>
+<!-- @/nav -->
 
+<!-- @mnav -->
 <div class="mnav">
   <a href="index.html">Főoldal</a>
-  <a href="termekek.html">Termékek <small>22 finomság</small></a>
+  <a href="termekek.html">Termékek <small>35 finomság</small></a>
+  <a href="kiszallitas.html">Kiszállítás <small>előrendelés</small></a>
   <a href="rolunk.html">Történetünk</a>
-  <a href="szallitas.html">Szállítás</a>
   <a href="kapcsolat.html">Kapcsolat</a>
   <div class="mnav__foot">
-    Pécsi Vásárcsarnok · kedd-péntek 6:00-14:00 · szombat 6:00-12:00<br>
+    Pécsi Vásárcsarnok, Pécs, Zólyom utca 4. · kedd-péntek 6:00-14:00 · szombat 6:00-12:00<br>
     <a href="tel:+36303007422">+36 30 300 7422</a>
   </div>
 </div>
+<!-- @/mnav -->
 
 <!-- ============ HERO ============ -->
 <header class="phero phero--tall hero">
@@ -106,6 +111,7 @@
         <p class="eyebrow">3 · A bolt</p>
         <h2 style="font-size:var(--step-3);max-width:16ch;margin-top:1rem">Így született a Hegyháti Finomságok</h2>
         <p style="margin-top:1.2rem;color:var(--muted);max-width:48ch">A kínálatunkban a klasszikus disznótoros termékek mellett saját különlegességeink is megtalálhatók, mint a parasztmájas és a borókás szalámi, amelyek egyedi ízvilágukkal gazdagítják a pultot.</p>
+        <p style="margin-top:1rem;color:var(--ink);max-width:48ch"><strong>Az üzletünk:</strong> Pécsi Vásárcsarnok, Pécs, Zólyom utca 4. <a href="https://www.google.com/maps/search/?api=1&query=P%C3%A9cs%2C+Z%C3%B3lyom+utca+4." target="_blank" rel="noopener" style="color:var(--accent-soft);text-decoration:underline;text-underline-offset:3px">Útvonal ↗</a></p>
         <div class="tline">
           <div class="tline__item">
             <div class="tline__date">2026. február</div>
@@ -175,33 +181,42 @@
   <div class="wrap" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:2rem">
     <div>
       <h2 style="font-size:var(--step-3);max-width:16ch" data-reveal>Kóstolja meg, miről beszélünk</h2>
-      <p style="color:var(--muted);margin-top:.8rem" data-reveal>Keddtől szombatig a pultnál, vagy rendeljen, és házhoz visszük.</p>
+      <p style="color:var(--muted);margin-top:.8rem" data-reveal>Keddtől szombatig a pultnál (Pécs, Zólyom utca 4.), vagy rendeljen, és kiszállítjuk előrendeléssel.</p>
     </div>
     <a href="termekek.html" class="btn btn--solid" data-magnet>Termékeink
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
   </div>
 </section>
 
-<footer class="footer">
+<!-- @footer full -->
+<footer class="footer" style="margin-top:0">
   <div class="wrap">
     <div class="footer__grid" style="padding-top:0">
       <div>
         <div class="footer__brandline">
-          <div class="stamp"><img src="media/logo-emblem.png" alt="Hegyháti Finomságok embléma"></div>
+          <div class="stamp"><img src="media/logo-hegyhati.webp" alt="Hegyháti Finomságok logó" width="118" height="118"></div>
           <div>
             <strong style="font-family:var(--font-display);font-size:1.25rem">Hegyháti Finomságok</strong>
             <p style="margin-top:.3rem">Saját földből, saját kézből.</p>
           </div>
         </div>
+        <p style="margin-top:1.4rem;max-width:34ch">Kistermelői kézműves húsáruk Pécsről, saját tenyésztésű állatokból, hagyományos családi receptek szerint.</p>
       </div>
       <div>
-        <h4>Bolt</h4>
-        <a href="termekek.html">Termékek</a>
-        <a href="szallitas.html">Szállítás és átvétel</a>
-        <a href="penztar.html">Kosár és pénztár</a>
+        <h4>Termékek</h4>
+        <a href="sonka.html">Sonka</a>
+        <a href="szalonna.html">Szalonna</a>
+        <a href="kolbasz.html">Kolbász</a>
+        <a href="szalami.html">Szalámi</a>
+        <a href="pacolt-hus.html">Pácolt hús</a>
+        <a href="teperto.html">Tepertő</a>
+        <a href="majas.html">Májas</a>
+        <a href="termekek.html">Teljes kínálat</a>
       </div>
       <div>
         <h4>Információ</h4>
+        <a href="kiszallitas.html">Kiszállítás / Előrendelés</a>
+        <a href="szallitas.html">Szállítás és átvétel</a>
         <a href="rolunk.html">Történetünk</a>
         <a href="kapcsolat.html">Kapcsolat</a>
         <a href="aszf.html">ÁSZF</a>
@@ -212,18 +227,20 @@
       <div>
         <h4>Elérhetőség</h4>
         <p>Pécsi Vásárcsarnok</p>
+        <p>Pécs, Zólyom utca 4.</p>
         <p>Kedd-péntek 6:00-14:00 · Szombat 6:00-12:00</p>
         <a href="tel:+36303007422" class="num-tab">+36 30 300 7422</a>
         <a href="mailto:hegyhatihus@gmail.com">hegyhatihus@gmail.com</a>
-        <a href="https://www.facebook.com/profile.php?id=61588375946089" target="_blank" rel="noopener">Facebook ↗</a>
+        <a href="https://www.facebook.com/hegyhatifinomsagok" target="_blank" rel="noopener">Facebook ↗</a>
       </div>
     </div>
     <div class="footer__bottom">
       <span>© 2026 Hegyháti Finomságok · Pécs</span>
-      <span>Rendelés és kiszállítás augusztus 17-től elérhető az oldalon.</span>
+      <span>Kistermelői húsáruk a Pécsi Vásárcsarnokból. Minden ár tájékoztató jellegű.</span>
     </div>
   </div>
 </footer>
+<!-- @/footer -->
 
 <script src="js/vendor/gsap.min.js"></script>
 <script src="js/vendor/ScrollTrigger.min.js"></script>
